@@ -1,0 +1,140 @@
+body{
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+}
+/* Default*/
+a{
+    text-decoration: none;
+}
+h1,h2,h3{
+    font-family: 'Prata', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+h1{
+}
+.hr{
+    width: 75px;
+    display: inline-block;
+    border: 3px solid #0A46BF;
+}
+img{
+    max-width: 100%;
+}
+.flex{
+    display: flex;
+}
+.logo{
+    max-width: 200px;
+}
+li{
+    list-style: none;
+}
+
+
+/* HEADER */
+header{
+    /* background: pink; */
+    position: absolute;
+    top: 0;
+    width: 100%; 
+}
+header .bar{
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+header .bar .content .toggle{
+    display: none;
+}
+header .bar .main-menu{
+    flex: 1;
+    justify-content: flex-end;
+}
+header .bar .main-menu li{
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+header .bar .main-menu li:last-child{
+    margin-right: 0;
+}
+header .bar .main-menu li a{
+    color: #ffffff;
+}
+header .bar .main-menu li a:hover{
+    color: #0A46BF;
+}
+
+/* SLIDER SECTION */
+.slider{
+    background-image: url('../img/slider.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.slider .content{
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+.slider .content .info-cont{
+    color: #0A46BF;
+    text-align: center;
+    width: 60%;
+}
+.slider .content .info-cont p{
+    color: #010D26;
+}
+main{
+    margin-bottom: 100px;
+    padding: 75px 0;
+}
+main .content{
+    margin-top: 50px;
+}
+main .tab-father{
+    align-items: flex-end;
+}
+main .tab-father .tab{
+    border: 1px solid #F2F2F2;
+    border-bottom: none;
+    padding: 15px 20px;
+    background: #010D26;
+    color: #ffffff;
+}
+main .tab-father .tab.active{
+    background: #ffffff;
+    color: #010D26;
+    padding: 20px;
+}
+main .info-form{
+    padding: 25px 0;
+    background: #ffffff;;
+    /* border:1px solid #f4f4f4; */
+    box-shadow: 3px 4px 6px rgba(0,0,0,0.1);
+    padding: 50px 0;
+
+}
+main .info-form  form>div{
+    border-right:1px solid #cccccc;
+    flex: 0 0 38%;
+    padding: 0 10px;
+}
+main .info-form  form>div:last-child{
+    border-right: none;
+    flex: 0 0 24%;
+}
+main .info-form  form>div input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid black;
+}
+
+main .info-form .vuelta{
+    display: none;
+}
+main .info-form .vuelta .when input{
+    width: 100%;
+}
+main .info-form .multidestino{
+    display: none;
+}
