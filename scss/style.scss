@@ -1,0 +1,14 @@
+// VARIABLES
+$main:#d4c1a0;
+$secundary:#1d1f2c;
+$red:#aa3f45;
+$semi-gold:#f5f4ef;
+$grey:rgba(30, 30, 45,0.7);
+$pane-padding: 5px 42px;
+$merri:'Merriweather', serif;
+$barlow:'Barlow Condensed', sans-serif;
+
+@import 'others/default';
+@import 'others/header';
+@import 'others/page';
+@import 'others/footer';

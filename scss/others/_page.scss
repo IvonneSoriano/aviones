@@ -1,0 +1,256 @@
+/* SLIDER SECTION */
+.slider {
+    background-image: url('../img/aviongris.png');
+    background-size: cover;
+    background-position: center;
+
+    .content {
+        min-height: 90vh;
+        align-items: center;
+        justify-content: center;
+
+        .info-cont {
+            color: $main;
+            text-align: center;
+            width: 60%;
+
+            p {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+// ENDS SLIDER SECTION
+
+/* number line */
+
+.line {
+    padding: 75px 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    .space {
+        font-family: $barlow;
+        text-align: center;
+
+        .number {
+            font-size: 75px;
+            margin-bottom: 0;
+            color: $main;
+            font-weight: 700;
+        }
+
+        .text {
+            color: $secundary;
+            font-size: 25px;
+        }
+    }
+}
+
+// endes number line 
+/* MAIN */
+
+main {
+    margin-bottom: 100px;
+    padding: 75px 0;
+    background: $secundary;
+    color: $main;
+
+    .content {
+        margin-top: 50px;
+    }
+
+    .tab-father {
+        align-items: flex-end;
+
+        .tab {
+            border: 1px solid $secundary;
+            border-bottom: none;
+            padding: 15px 70px;
+            background: $red;
+            border-radius: 15px 15px 0 0;
+            color: #ffffff;
+            -webkit-border-radius: 15px 15px 0 0;
+            -moz-border-radius: 15px 15px 0 0;
+            -ms-border-radius: 15px 15px 0 0;
+            -o-border-radius: 15px 15px 0 0;
+            font-family: $barlow;
+
+            &.active {
+                background: #f5f4ef;
+                color: #010D26;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .info-form {
+        padding: 25px 0;
+        background: #f5f4ef;
+        border: 1px solid $secundary;
+        border-top: none;
+        border-radius: 0 15px 15px 15px;
+        padding: 50px;
+        -webkit-border-radius: 0 15px 15px 15px;
+        -moz-border-radius: 0 15px 15px 15px;
+        -ms-border-radius: 0 15px 15px 15px;
+        -o-border-radius: 0 15px 15px 15px;
+
+        .ida-vuelta {
+            form {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+
+        form {
+            &>div {
+                display: flex;
+                margin-bottom: 40px;
+
+                .campo {
+                    /* display: flex; */
+                    flex: 0 0 calc(50% - 20px);
+                    margin-right: 20px;
+                }
+
+                label {
+                    display: inline-block;
+                    color: $grey;
+                }
+
+                input,
+                select {
+                    border: 1px solid #efeeea;
+                    width: 100%;
+                    display: block;
+                    background: #ffffff;
+                    outline: none;
+                    padding: 15px 25px;
+                    border-radius: 30px;
+                    ;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -ms-border-radius: 30px;
+                    -o-border-radius: 30px;
+                }
+            }
+
+            .where {
+                /* border-right:1px solid #cccccc; */
+                flex: 0 0 100%;
+
+                button {
+                    visibility: hidden;
+                }
+            }
+
+            .when,
+            .how {
+                /* border-right:1px solid #cccccc; */
+                flex: 0 0 calc(45% - 35px);
+            }
+        }
+
+        .vuelta {
+            display: none;
+
+            // .when input {
+            //     width: 100%;
+            // }
+        }
+
+        .multidestino {
+            display: none;
+        }
+
+    }
+}
+
+// endes main
+
+// PROMOS SECTION 
+.promos {
+    @include padd-in();
+    background: $semi-gold;
+
+    .hashtag {
+        color: $red;
+        font-family: $barlow;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .terms {
+        font-size: 13px;
+        color: $grey;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .sales-father {
+        justify-content: space-between;
+        padding: 75px 0;
+    }
+
+    .big-sale {
+        flex: 0 0 calc(50% - 100px);
+        margin-right: 20px;
+        max-height: 570px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .promo-content {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-between;
+    }
+
+    .promo-item {
+        flex: 0 0 calc(50% - 35px);
+        border-radius: 15px;
+        overflow: hidden;
+        max-height: 268px;
+    }
+
+    .filter-card {
+        background: transparent !important;
+        position: relative;
+            .front,
+            .back {
+                position: absolute;
+                backface-visibility: hidden;
+                background: transparent;
+                width: 100%;
+                height: 100%;
+            }
+
+            .back {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                background: $grey;
+                transition:opacity 0.6s;
+                opacity: 0;
+                -webkit-transition:opacity 0.6s;
+                -moz-transition:opacity 0.6s;
+                -ms-transition:opacity 0.6s;
+                -o-transition:opacity 0.6s;
+}
+            &:hover{
+                .back{
+                    opacity: 1;
+                }
+            }
+        }
+    
+}
+
+// ENDS PROMOS SECTION 

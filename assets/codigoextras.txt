@@ -1,0 +1,44 @@
+codigo aparte para flip-cards
+.flip-card {
+        background: transparent !important;
+        
+        perspective: 1500px;
+
+        .inner {
+            width: 100;
+            height: 100%;
+            border-radius: 15px;
+            position: relative;
+            background: transparent !important;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+            .front,
+            .back {
+                position: absolute;
+                backface-visibility: hidden;
+                background: transparent;
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                overflow: hidden;
+            }
+
+            .back {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                background: $grey;
+                transform: rotateY(180deg);
+            }
+        }
+
+        &:hover {
+            .inner {
+                transform: rotateY(180deg);
+            }
+
+        }
+    }

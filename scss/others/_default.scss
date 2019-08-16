@@ -1,0 +1,75 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: $merri;
+    font-size: 20px;
+}
+
+@mixin btn() {
+    display: inline-block;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    font-family: $barlow;
+    border-radius: 50px;
+    border: none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    cursor: pointer;
+}
+
+.btn-gold {
+    @include btn();
+    background: $main;
+    color: $secundary;
+
+    &:hover {
+        background: $secundary;
+        color: $main;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: $barlow;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1,
+.h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.hr {
+    width: 75px;
+    display: inline-block;
+    border: 3px solid #0A46BF;
+}
+
+img {
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.logo {
+    max-width: 200px;
+}
+
+li {
+    list-style: none;
+}
+
+@mixin padd-in(){
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
