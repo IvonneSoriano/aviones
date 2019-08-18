@@ -1,0 +1,38 @@
+footer{
+    background-image: url('../img/world.jpeg');
+    .container{
+        min-height: 200px;
+        padding: 75px 0;
+        color: $white;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .logo{
+            text-align: center;
+            margin-bottom: 25px;
+            img{
+                max-width: 250px;
+            }
+        }
+        .social-networks
+        {
+            margin-top: 25px;
+            display: flex;
+            .network-logo{
+                width: 25px;
+                height: 25px;
+                fill: $white;
+                margin-right: 25px;
+            }
+        }
+    }
+    .team{
+        background: rgba(29,31,44,0.5);
+        color: $white;
+        padding: 25px 0;
+        p{
+            margin: 0;
+        }
+    }
+}

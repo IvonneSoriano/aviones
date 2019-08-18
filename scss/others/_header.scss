@@ -3,11 +3,14 @@ header {
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 25;
 
     .bar {
         min-height: 70px;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 20px 0;
 
         .content .toggle {
             display: none;
@@ -29,6 +32,7 @@ header {
 
                 a {
                     color: #ffffff;
+                    font-family: $barlow;
 
                     &:hover {
                         color: #0A46BF;

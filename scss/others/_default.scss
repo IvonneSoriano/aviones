@@ -5,7 +5,8 @@ a {
 body {
     margin: 0;
     font-family: $merri;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 @mixin btn() {
@@ -15,13 +16,15 @@ body {
     font-family: $barlow;
     border-radius: 50px;
     border: none;
+    font-weight: 700;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
     text-decoration: none;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         text-decoration: none;
     }
 }
@@ -36,6 +39,7 @@ body {
         color: $main;
     }
 }
+
 .btn-red {
     @include btn();
     background: $red;
@@ -44,6 +48,15 @@ body {
     &:hover {
         background: $white;
         color: $red;
+    }
+}
+button{
+    outline: none;
+    &:hover{
+        outline: none;
+    }
+    &:focus{
+        outline: none;
     }
 }
 h1,
@@ -57,15 +70,39 @@ h3 {
 h1,
 .h1 {
     font-weight: 700;
+    font-size: 70px;
+}
+
+h2,
+.h2 {
+    font-weight: 700;
     font-size: 50px;
+}
+
+h3,
+.h3 {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.hashtag {
+    color: $red;
+    font-family: $barlow;
+    font-weight: 700;
+    text-align: center;
+    font-size: 25px;
 }
 
 .hr {
     width: 75px;
     display: inline-block;
-    border: 3px solid #0A46BF;
+    margin: 0;
+    margin-bottom: 1rem;
+    border: 3px solid $red;
 }
-
+input{
+    outline: none;
+}
 img {
     max-width: 100%;
 }
@@ -82,7 +119,42 @@ li {
     list-style: none;
 }
 
-@mixin padd-in(){
+@mixin padd-in() {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+
+// MODIFICACIONES DE SLICK 
+.slick-dotted {
+    &.slick-slider {
+        margin-bottom: 0px;
+    }
+}
+
+.slick-dots {
+    bottom: 10px;
+
+    li {
+        button {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+            background: rgba(255,255,255, 0.4);
+
+            &::before {
+                content: '';
+            }
+        }
+
+        &.slick-active {
+            button {
+                background: rgba(255,255,255,.6);
+            }
+        }
+    }
 }
