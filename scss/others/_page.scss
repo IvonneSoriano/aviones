@@ -372,8 +372,8 @@ main {
 
 // CALL US SECTION
 .newsletter {
-  background: $red;
-
+  background: $secundary;
+  color: $white;
   // padding: 100px 0;
   .container {
     background-image: url("../img/avionpapel.png");
@@ -382,6 +382,9 @@ main {
     text-align: center;
     background-repeat: no-repeat;
     background-size: 80%;
+    h3 {
+      color: $main;
+    }
 
     .campo {
       background: $white;
@@ -401,11 +404,7 @@ main {
         width: 100%;
         padding: 15px 40px;
         border-radius: 50px;
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        -ms-border-radius: 50px;
-        -o-border-radius: 50px;
-      }
+}
 
       input,
       button {

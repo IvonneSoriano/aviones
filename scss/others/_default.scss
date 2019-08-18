@@ -50,6 +50,16 @@ body {
         color: $red;
     }
 }
+.btn-goldred{
+    @include btn();
+    background: $main;
+    color:$red;
+
+    &:hover{
+        background: $red;
+        color: $main;
+    }
+}
 button{
     outline: none;
     &:hover{
@@ -109,10 +119,6 @@ img {
 
 .flex {
     display: flex;
-}
-
-.logo {
-    max-width: 200px;
 }
 
 li {
