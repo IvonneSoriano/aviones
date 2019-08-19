@@ -13,8 +13,6 @@ $(document).ready(function(){
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
               infinite: true,
               dots: true
             }
@@ -22,15 +20,15 @@ $(document).ready(function(){
           {
             breakpoint: 600,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
+              infinite: true,
+              dots: true
             }
           },
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
+              infinite: true,
+              dots: true
             }
           }
           // You can unslick at a given breakpoint now by adding:
@@ -43,6 +41,8 @@ $(document).ready(function(){
         delay: 10,
         time: 1500
     });
+
+
 
 });
 
@@ -68,3 +68,19 @@ function openTab(evt, vuelo) {
   
   evt.currentTarget.className += " active";
 };
+
+
+var coll = document.getElementsByClassName("collapse-head");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}

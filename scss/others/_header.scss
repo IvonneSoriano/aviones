@@ -38,7 +38,17 @@ header {
                     font-family: $barlow;
 
                     &:hover {
-                        color: #0A46BF;
+                        color: $main;
+                    }
+                    span{
+                        .menu-logo{
+                            height: 18px;
+                            width: 18px;
+                            fill: $white;
+                            &:hover{
+                                fill: $main;
+                            }
+                        }
                     }
                 }
             }

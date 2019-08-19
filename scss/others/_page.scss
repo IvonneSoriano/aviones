@@ -347,13 +347,15 @@ main {
         color: $secundary;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
 
         p {
           margin: 0;
         }
 
-        .button {
+        .button-qa {
           display: block;
+          cursor: pointer;
 
           img {
             max-height: 20px;
@@ -363,6 +365,7 @@ main {
 
       .collapse-body {
         display: none;
+        padding: 10px 20px;
       }
     }
   }
@@ -413,5 +416,6 @@ main {
     }
   }
 }
+
 
 // ENDS CALL US SECTION
