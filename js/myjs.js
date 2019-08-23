@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+
     $('.slider').slick({
         dots: true,
         infinite: true,
@@ -41,7 +43,9 @@ $(document).ready(function(){
         time: 1500
     });
 
-
+    if($('body').hasClass('index')){
+      document.getElementById("default-tab").click();
+    }
 
 });
 
