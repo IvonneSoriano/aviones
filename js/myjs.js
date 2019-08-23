@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  document.getElementById("default-tab").click();
     $('.slider').slick({
         dots: true,
         infinite: true,
@@ -83,4 +82,31 @@ for (i = 0; i < coll.length; i++) {
       content.style.display = "block";
     }
   });
-}
+};
+
+// Code to open the modal
+var modalBtns = document.querySelectorAll('.modal-open');
+
+modalBtns.forEach(function(btn) {
+  btn.onclick=function(){
+    var modal = btn.getAttribute("data-modal");
+    document.getElementById(modal).style.display='block';
+    $('body').addClass('no-scroll');
+  };
+});
+
+var closeModal=document.querySelectorAll('.close-butt');
+closeModal.forEach(function(btn) {
+
+  btn.onclick=function(){
+    var modal=(btn.closest('.modal-bio').style.display="none");
+    $('body').removeClass('no-scroll');
+  };
+});
+
+window.onclick=function(e){
+  if(e.target.className==='modal-bio'){
+    e.target.style.display="none";
+    $('body').removeClass('no-scroll');
+  }
+};
