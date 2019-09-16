@@ -55,4 +55,9 @@ footer{
             margin-left: 25px;
         }
     }
+    @media(max-width:576px){
+        .container{
+            flex-direction: column;
+        }
+    }
 }

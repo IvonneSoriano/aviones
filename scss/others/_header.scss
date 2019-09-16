@@ -11,12 +11,13 @@ header {
         min-height: 70px;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         padding: 20px 0;
 
         .content .toggle {
             display: none;
         }
+
         .logo {
             max-width: 200px;
         }
@@ -42,12 +43,14 @@ header {
                     &:hover {
                         color: $main;
                     }
-                    span{
-                        .menu-logo{
+
+                    span {
+                        .menu-logo {
                             height: 18px;
                             width: 18px;
                             fill: $white;
-                            &:hover{
+
+                            &:hover {
                                 fill: $main;
                             }
                         }
@@ -56,19 +59,34 @@ header {
             }
         }
     }
-    &.white{
+
+    &.white {
         background: $white;
-        .bar{
-           .main-menu{
-               li{
-                   a{
-                       color: #000;
-                       &:hover{
-                           color: $main;
-                       }
-                   }
-               }
-           } 
+
+        .bar {
+            .main-menu {
+                li {
+                    a {
+                        color: #000;
+
+                        &:hover {
+                            color: $main;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:576px) {
+        .bar {
+            flex-direction: column;
+
+            .main-menu {
+                opacity: 0;
+                display: none;
+                flex-direction: column;
+            }
         }
     }
 }

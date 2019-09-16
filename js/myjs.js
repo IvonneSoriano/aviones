@@ -38,6 +38,29 @@ $(document).ready(function(){
         ]
       });
       
+      $('.slick-line').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow:5,
+        autoplay: false,
+        arrows: false,
+        variableWidth:true,
+        responsive: [
+          {
+            breakpoint: 577,
+            settings: {
+              infinite: true,
+              autoplay:true
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+      
+
       $('.counter').counterUp({
         delay: 10,
         time: 1500
