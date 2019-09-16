@@ -1,5 +1,12 @@
 * {
     outline: 0;
+    padding: 0;
+    &:hover{
+        outline: none;
+    }
+    &:focus{
+        outline: none;
+    }
 }
 
 a {
@@ -114,6 +121,15 @@ body {
         color: $red;
     }
 }
+.btn-blue-border{
+    @include btn();
+   border: 1px solid $secundary;
+    color: $secundary;
+    &:hover{
+        color: $main;
+    }
+}
+
 
 button {
     outline: none;

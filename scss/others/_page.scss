@@ -672,12 +672,15 @@ main {
               border-radius: 50%;
             }
           }
-          .flex{
+
+          .flex {
             flex-wrap: wrap;
-            &>div{
+
+            &>div {
               flex: 0 0 50%;
             }
-            .desc{
+
+            .desc {
               flex: 0 0 100%;
             }
           }
@@ -688,3 +691,74 @@ main {
 }
 
 /*---------------E N D S  T E A M  PAGE --------------------*/
+
+
+/*---------------S T A R T S  L O G I N  PAGE --------------------*/
+.login {
+  height: 100vh;
+
+  .container-fluid {
+
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
+    align-items: center;
+    padding: 0;
+  }
+
+  .form {
+
+    // padding: 100px;
+    form {
+      max-width: 650px;
+      
+      padding: 50px 0;
+      margin: 0 auto;
+      h2 {
+        span {
+          color: $red;
+        }
+
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+        color: $grey;
+      }
+
+      label {
+        color: $grey;
+      }
+      .campo {
+        margin-bottom: 20px;
+      }
+      &.form-login {
+        .conf {
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      &.form-signup{
+        .double-campo{
+          display: flex;
+          justify-content: space-between;
+          .campo{
+            flex: 0 0 calc(55% - 50px);
+
+          }
+        }
+      }
+    }
+  }
+
+  .image {
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+/*---------------E N D S  L O G I N  PAGE --------------------*/
