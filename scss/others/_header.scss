@@ -4,6 +4,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 25;
+    font-weight: 700;
+
 
     .bar {
         min-height: 70px;
@@ -52,6 +54,21 @@ header {
                     }
                 }
             }
+        }
+    }
+    &.white{
+        background: $white;
+        .bar{
+           .main-menu{
+               li{
+                   a{
+                       color: #000;
+                       &:hover{
+                           color: $main;
+                       }
+                   }
+               }
+           } 
         }
     }
 }
