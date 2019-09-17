@@ -402,6 +402,7 @@
       }
 
     }
+
     .q-a {
       .content {
         .q-a-item {
@@ -433,7 +434,8 @@
         }
       }
     }
-    .line{
+
+    .line {
       flex-direction: column;
     }
   }
@@ -515,166 +517,216 @@
 /*---------------I N D E X PAGE --------------------*/
 
 /*---------------V U E L O S PAGE --------------------*/
-.schedule-show {
-  @include padd-in();
-  flex: 1;
-  padding-right: 60px;
+.vuelos {
+  .schedule-show {
+    @include padd-in();
+    flex: 1;
+    padding-right: 60px;
 
-  .flight-info {
-    padding: 25px 0;
+    .flight-info {
+      padding: 25px 0;
 
-    p {
+      p {
 
-      img {
-        width: 30px;
-        height: 30px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
-  }
 
-  .filtro {
-    select {
-      flex: 0 0 25%;
-      margin-right: 25px;
-    }
-
-    input {
-      flex: 0 1 75%;
-    }
-  }
-
-  .schedules {
-    padding: 35px 0;
-
-    .boleto {
-      margin-top: 30px;
-      background: $secundary;
-      color: #000000;
-      padding: 25px 60px;
-      border-radius: 15px;
-      position: relative;
-      transition: all 0.3s;
-
-      &:hover {
-        transform: scale(1.05);
+    .filtro {
+      select {
+        flex: 0 0 30%;
+        margin-right: 25px;
       }
 
-      &:first-of-type {
-        margin-top: 0;
+      input {
+        flex: 1;
+      }
+    }
+
+    .schedules {
+      padding: 35px 0;
+
+      .boleto {
+        margin-top: 30px;
+        background: $secundary;
+        color: #000000;
+        padding: 25px 60px;
+        border-radius: 15px;
+        position: relative;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+
+        .flight-title {
+          justify-content: space-between;
+
+          p {
+            text-align: center;
+            font-weight: 700;
+            color: $main;
+
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+
+          span {
+            display: block;
+            font-family: 'Barlow Condensed';
+            font-size: 40px;
+            color: #aa3f45;
+          }
+
+
+        }
       }
 
-      .flight-title {
+      .circle {
+        height: 36px;
+        width: 36px;
+        border-radius: 100%;
+        position: absolute;
+        background: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.left {
+          left: -18px;
+        }
+
+        &.right {
+          right: -18px;
+
+        }
+      }
+
+      .precios {
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-content: space-between;
+        color: #fff;
+        align-items: center;
 
-        p {
+        &>div {
+          padding: 5px 20px;
           text-align: center;
-          font-weight: 700;
-          color: $main;
+          flex: 1;
+          border-right: 1px solid;
+          cursor: pointer;
 
-          img {
-            width: 30px;
-            height: 30px;
+          &:last-of-type {
+            border-right: none;
+          }
+
+          .class {
+            font-size: 14px;
+            margin-bottom: 0.1rem;
+          }
+
+          .price {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 0;
+            color: #d4c1a0;
           }
         }
-
-        span {
-          display: block;
-          font-family: 'Barlow Condensed';
-          font-size: 40px;
-          color: #aa3f45;
-        }
-
-
       }
     }
+  }
 
-    .circle {
-      height: 36px;
-      width: 36px;
-      border-radius: 100%;
-      position: absolute;
-      background: #fff;
-      top: 50%;
-      transform: translateY(-50%);
+  .ticket-zone {
+    flex: 0 0 35%;
 
-      &.left {
-        left: -18px;
-      }
-
-      &.right {
-        right: -18px;
-
-      }
-    }
-
-    .precios {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-content: space-between;
-      color: #fff;
+    .ticket {
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      color: $secundary;
+      padding: 0px 35px 35px;
 
       &>div {
-        padding: 5px 20px;
-        text-align: center;
-        flex: 1;
-        border-right: 1px solid;
-        cursor: pointer;
-
-        &:last-of-type {
-          border-right: none;
-        }
-
-        .class {
-          font-size: 14px;
-          margin-bottom: 0.1rem;
-        }
-
-        .price {
-          font-weight: 700;
-          font-size: 20px;
-          margin-bottom: 0;
-          color: #d4c1a0;
-        }
-      }
-    }
-  }
-}
-
-.ticket-zone {
-  flex: 0 0 35%;
-
-  .ticket {
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
-    color: $secundary;
-    padding: 0px 35px 35px;
-
-    &>div {
-      p {
-        span {
-          img {
-            width: 25px;
-            height: 25px;
-          }
-        }
-      }
-
-      &.vuelta {
         p {
           span {
             img {
-              transform: rotateY(180deg);
-              -webkit-transform: rotateY(180deg);
-              -moz-transform: rotateY(180deg);
-              -ms-transform: rotateY(180deg);
-              -o-transform: rotateY(180deg);
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+
+        &.vuelta {
+          p {
+            span {
+              img {
+                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+                -moz-transform: rotateY(180deg);
+                -ms-transform: rotateY(180deg);
+                -o-transform: rotateY(180deg);
+              }
             }
           }
         }
       }
     }
   }
-}
 
+  @media (max-width:992px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .schedule-show {
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width:768px) {
+    .schedule-show {
+      .filtro {
+        flex-direction: column;
+        margin-top: 30px;
+
+        select {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width:576px) {
+    .schedule-show {
+      .flight-info{
+        text-align: center;
+        &>div{
+          &:first-of-type{
+            margin-top: 30px;
+            text-align: center;
+          }
+        }
+      }
+    .schedules{
+      .boleto{
+        padding: 25px;
+        .precios{
+          &>div{
+            padding: 5px;
+          }
+        }
+      }
+    }
+    }
+  }
+}
 
 /*---------------E N D S  V U E L O S PAGE --------------------*/
 
@@ -832,6 +884,14 @@
         }
       }
     }
+  }
+  @media (max-width:992px) {
+  .team-content{
+  .container{
+flex-wrap: wrap;
+justify-content: space-between;
+  }
+  }
   }
 }
 
