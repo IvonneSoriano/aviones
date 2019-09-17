@@ -402,6 +402,13 @@
       }
 
     }
+    .q-a {
+      .content {
+        .q-a-item {
+          flex-basis: 100%;
+        }
+      }
+    }
   }
 
   @media(max-width:768px) {
@@ -426,6 +433,9 @@
         }
       }
     }
+    .line{
+      flex-direction: column;
+    }
   }
 
   @media(max-width:576px) {
@@ -442,11 +452,11 @@
     .line {
       .space {
         .number {
-          font-size: 50px;
+          font-size: 60px;
         }
 
         .text {
-          font-size: 18px;
+          font-size: 20px;
         }
       }
     }
@@ -483,14 +493,6 @@
 
       &>div {
         flex: 0 0 100%;
-      }
-    }
-
-    .q-a {
-      .content {
-        .q-a-item {
-          flex-basis: 100%;
-        }
       }
     }
 

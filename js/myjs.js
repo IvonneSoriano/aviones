@@ -1,6 +1,16 @@
 $(document).ready(function(){
 
+$('.toggle').click(function(){
+$('header').toggleClass('active');
+if($('header').hasClass('active')){
+  $('.main-menu').fadeIn();
+}
+else{
+  $('.main-menu').fadeOut();
+}
 
+
+});
     $('.slider').slick({
         dots: true,
         infinite: true,
@@ -37,29 +47,6 @@ $(document).ready(function(){
           // instead of a settings object
         ]
       });
-      
-      $('.slick-line').slick({
-        dots: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow:5,
-        autoplay: false,
-        arrows: false,
-        variableWidth:true,
-        responsive: [
-          {
-            breakpoint: 577,
-            settings: {
-              infinite: true,
-              autoplay:true
-            }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-        ]
-      });
-      
 
       $('.counter').counterUp({
         delay: 10,
@@ -137,3 +124,4 @@ window.onclick=function(e){
     $('body').removeClass('no-scroll');
   }
 };
+
