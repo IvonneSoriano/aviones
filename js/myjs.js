@@ -1,4 +1,7 @@
+
+
 $(document).ready(function(){
+
 
 $('.toggle').click(function(){
 $('header').toggleClass('active');
@@ -11,6 +14,7 @@ else{
 
 
 });
+
     $('.slider').slick({
         dots: true,
         infinite: true,
@@ -56,6 +60,8 @@ else{
     if($('body').hasClass('index')){
       document.getElementById("default-tab").click();
     }
+
+
 
 });
 
@@ -125,3 +131,11 @@ window.onclick=function(e){
   }
 };
 
+function showLogin(){
+  $('.form-signup').hide();
+  $('.login-form').fadeIn(1000);
+};
+function showSignUp(){
+  $('.login-form').hide();
+  $('.form-signup').fadeIn(1000);
+};

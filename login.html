@@ -53,8 +53,8 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-5 form">
-                <form action="" class="login-form d-none">
+            <div class="col-lg-7 col-xl-5 form">
+                <form action="" class="login-form active">
                     <h2>Somos <span>ABBIANKA</span></h2>
                     <p>Bienvenido de nuevo. Por favor ingresa con tu cuenta</p>
                     <div class="campo">
@@ -72,7 +72,7 @@
                             <a href="#">Olvidaste la contraseña?</a>
                         </div>
                         <input type="submit" class="btn btn-gold" value="Entrar">
-                        <input type="submit" class="btn btn-blue-border" value="Registrarse">
+                        <button type="button" class="btn btn-blue-border" onclick="showSignUp()">Registrarse</button>
                         
                 </form>
                 <form action="" class="form-signup">
@@ -88,6 +88,10 @@
                                 <input type="text" id="lastname" name="lastname">
                             </div>
                     </div>
+                    <div class="campo">
+                        <label for="tarjeta">Tarjeta</label>
+                        <input type="text" id="tarjeta" name="tarjeta">
+                    </div>
                     <div class="double-campo">
                             <div class="campo">
                                 <label for="id">Numero de identificacion</label>
@@ -102,6 +106,7 @@
                                 <label for="email">Correo</label>
                                 <input type="email" id="email" name="email">
                             </div>
+                            
                         <div class="double-campo">
                                 <div class="campo">
                                     <label for="pass">Contraseña</label>
@@ -113,11 +118,11 @@
                                     </div>
                             </div>
                             <input type="submit" class="btn btn-gold" value="Registrarse">
-                            <input type="submit" class="btn btn-blue-border" value="Entrar">
+                            <button type="button" class="btn btn-blue-border " onclick="showLogin()">Entrar</button>
                 </form>
                
             </div>
-            <div class="col-lg-7 image">
+            <div class="col-lg-5 col-xl-7 image">
                 <img src="img/vistaavion1.jpg" alt="">
             </div>
         </div>
